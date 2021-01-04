@@ -73,6 +73,8 @@ body {
   transition: transform 0.5s;
   border-radius: 5px;
   background-image: linear-gradient(-225deg, #76c3f0 0%, #2580b3 100%);
+  border-style: none;
+  
 }
 
 .memory-card:active {
@@ -129,6 +131,92 @@ body {
   border: 2px solid #064d75;
   background: linear-gradient(115.87deg, #14f1d9 0%, #3672f8 100%);
 }
+
+
+.sound {
+    background-color: #e91303;
+    
+}
+
+.toggle {
+    background-image: url("../images/vortex.svg");
+}
+
+
+.fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+
+/* https://stackoverflow.com/questions/22918220/how-to-create-a-only-mute-unmute-button-like-youtube-in-html?lq=1 */
+
+input#un-mute {
+    display: none;
+    
+    
+}
+
+.unmute img {
+    display: none;
+    
+}
+
+input#un-mute:checked ~ .unmute img {
+    display: initial;
+    
+}
+
+input#un-mute:checked ~ .mute img {
+    display: none;
+    
+}
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /*LARGE DEVICES*/
 @media (min-width: 992px) {

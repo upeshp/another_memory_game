@@ -25,6 +25,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- FONTAWESOME LINK -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
     <link rel="stylesheet" href="assets/style/style.css" />
 
   </head>
@@ -40,13 +43,38 @@
         </div>    
     </div>
 
-    <button onclick="enableMute()" type="button">Mute sound</button>
+    
+   
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!--https://stackoverflow.com/questions/22918220/how-to-create-a-only-mute-unmute-button-like-youtube-in-html?lq=1-->
+                
+               <!--- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+                 <!-- Trigger/Open The Modal -->
+                    <button id="myBtn">?</button>
+
+ 
+
+            </div>
+            <div class="col">
+                <p></p>
+            </div>
+            <div class="col">
+                <p> <img  src="assets/images/volume_up.png" onclick="toggleSound(this);" width="10%" height="10%"></p>
+            </div>
+        </div>
+    </div>
+
+    <img src="assets/images/volume_up.png" id="toggleImage" onclick="toggleImage();"/>
 
     <section class="container mx-auto">
       <section class="mx-auto">
         <div class="row">
           <div class="col-12 text-center points">
-            <p>Matches: <span id="point"> 0</span></p>
+            <p>Points: <span id="point"> 0</span></p>
           </div>
         </div>
 
@@ -55,6 +83,17 @@
           <p>Battles won: <span id="finalPoints">0</span></p>
           <button class="btn" id="playAgain">Conquer another galaxy</button>
         </div>
+
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>  
 
         <section class="memory-game">
 
@@ -122,6 +161,10 @@
       </section>
     </section>
 
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    
   </body>
 </html>
