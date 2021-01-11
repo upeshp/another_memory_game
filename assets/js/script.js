@@ -23,7 +23,7 @@ let firstCard, secondCard;
 /* code for adding sound effects taken from https://www.youtube.com/watch?v=QHBOOouI1tY */
 
 var fxCorrect = new Audio("assets/sounds/nothing_goes_new.mp3");
-var fxWrong = new Audio("assets/sounds/i_don't_learn_new.mp3");
+var fxWrong = new Audio("assets/sounds/one_of_my_issues_new.mp3");
 var fxWon = new Audio("assets/sounds/oh_yeah.mp3");
 
 /* code for adding mute button from https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_av_prop_muted */
