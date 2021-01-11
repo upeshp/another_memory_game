@@ -1,170 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>COSMOS</title>
 
     <!--GOOGLE FONTS-->
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
 
     <!--BOOTSTRAP-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 
     <!-- FONTAWESOME LINK -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
     <link rel="stylesheet" href="assets/style/style.css" />
 
-  </head>
+</head>
 
-  <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <header class="text-center">
-                    <img src="assets/images/logo.png" class="img-fluid" alt="GUARDIANS OF THE GALAXY">      
-                </header>  
-            </div>
-        </div>    
-    </div>
+<body>
 
-    
-   
-
-    
+    <!--HEADER-->
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <!--https://stackoverflow.com/questions/22918220/how-to-create-a-only-mute-unmute-button-like-youtube-in-html?lq=1-->
-                
-               <!--- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
-                 <!-- Trigger/Open The Modal -->
-                    <button id="myBtn">?</button>
 
- 
+        <div class="row no-gutters">
 
+            <div class="col-4"></div>
+
+            <div class="col-4">
+                <header class="text-center">
+                    <img src="assets/images/logo.png" class="img-fluid" alt="GUARDIANS OF THE GALAXY">
+                    <p style="color: aliceblue;">Pairs Game</p>
+                </header>
             </div>
-            <div class="col">
-                <p></p>
-            </div>
-            <div class="col">
-                <p> <img  src="assets/images/volume_up.png" onclick="toggleSound(this);" width="10%" height="10%"></p>
-            </div>
+
+            <div class="col-4"></div>    
+
         </div>
+
     </div>
 
-    <img src="assets/images/volume_up.png" id="toggleImage" onclick="toggleImage();"/>
+    
+    
+
+
+    <!--GAME INFO-->
+
+    <div class="container">
+
+        <div class="row no-gutters justify-content-center align-items-center">
+
+            <div class="col-2">
+            </div>
+
+            <div class="col-2">
+                <!--- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal -->
+                <!-- Trigger/Open The Modal -->
+                <div id="HelpBtn"> </div>
+            </div>
+
+            <div class="col-4 text-center">
+                <p style="color: aliceblue;">Points: <span id="point"> 0</span></p>
+            </div>
+
+            <div class="col-2">
+                <!-- http://www.developphp.com/video/JavaScript/Change-CSS-Class-Style-className-Toggle-Tutorial -->
+                <div class="soundon" onclick="toggleClass(this)"></div>
+            </div>
+
+            <div class="col-2">
+            </div>
+
+        </div>   
+
+    </div>
+
+    <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Match the cards, earn 4 points for each correct match, but lose 1 point for a mismatch!</p>
+                </div>
+
+            </div>
+
 
     <section class="container mx-auto">
-      <section class="mx-auto">
-        <div class="row">
-          <div class="col-12 text-center points">
-            <p>Points: <span id="point"> 0</span></p>
-          </div>
-        </div>
-
-        <div id="won" class="text-center">
-          <h1>You have conquered the galaxy!</h1>
-          <p>Battles won: <span id="finalPoints">0</span></p>
-          <button class="btn" id="playAgain">Conquer another galaxy</button>
-        </div>
-
-        <!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
-</div>  
-
-        <section class="memory-game">
-
-          <div class="memory-card" data-cards="card1">
-            <img class="front-face" src="assets/images/drax2.png" alt="drax" />
+        <section class="mx-auto">
             
-          </div>
 
-          <div class="memory-card" data-cards="card1">
-            <img class="front-face" src="assets/images/drax2.png" alt="drax" />
             
-          </div>
 
-          <div class="memory-card" data-cards="card2">
-            <img class="front-face" src="assets/images/gamorra2.png" alt="gamorra" />
-            
-          </div>
+            <section class="memory-game">
 
-          <div class="memory-card" data-cards="card2">
-            <img class="front-face" src="assets/images/gamorra2.png" alt="gamorra" />
-            
-          </div>
+                <div class="memory-card" data-cards="card1">
+                    <img class="front-face" src="assets/images/drax_card.jpg" alt="drax" />
 
-          <div class="memory-card" data-cards="card3">
-            <img class="front-face" src="assets/images/groot.png" alt="groot" />
-            
-          </div>
+                </div>
 
-          <div class="memory-card" data-cards="card3">
-            <img class="front-face" src="assets/images/groot.png" alt="groot" />
-            
-          </div>
+                <div class="memory-card" data-cards="card1">
+                    <img class="front-face" src="assets/images/drax_card.jpg" alt="drax" />
 
-          <div class="memory-card" data-cards="card4">
-            <img class="front-face" src="assets/images/nebula2.png" alt="nebula" />
-            
-          </div>
+                </div>
 
-          <div class="memory-card" data-cards="card4">
-            <img class="front-face" src="assets/images/nebula2.png" alt="nebula" />
-            
-          </div>
+                <div class="memory-card" data-cards="card2">
+                    <img class="front-face" src="assets/images/gamora_card.jpg" alt="gamorra" />
 
-          <div class="memory-card" data-cards="card5">
-            <img class="front-face" src="assets/images/raccoon.png" alt="raccoon" />
-            
-          </div>
+                </div>
 
-          <div class="memory-card" data-cards="card5">
-            <img class="front-face" src="assets/images/raccoon.png" alt="raccoon" />
-            
-          </div>
+                <div class="memory-card" data-cards="card2">
+                    <img class="front-face" src="assets/images/gamora_card.jpg" alt="gamorra" />
 
-          <div class="memory-card" data-cards="card6">
-            <img class="front-face" src="assets/images/starlord2.png" alt="starlord" />
-            
-          </div>
+                </div>
 
-          <div class="memory-card" data-cards="card6">
-            <img class="front-face" src="assets/images/starlord2.png" alt="stackpath" />
-            
-          </div>
-          
+                <div class="memory-card" data-cards="card3">
+                    <img class="front-face" src="assets/images/groot_card.jpg" alt="groot" />
+
+                </div>
+
+                <div class="memory-card" data-cards="card3">
+                    <img class="front-face" src="assets/images/groot_card.jpg" alt="groot" />
+
+                </div>
+
+                <div class="memory-card" data-cards="card4">
+                    <img class="front-face" src="assets/images/nebula_card.jpg" alt="nebula" />
+
+                </div>
+
+                <div class="memory-card" data-cards="card4">
+                    <img class="front-face" src="assets/images/nebula_card.jpg" alt="nebula" />
+
+                </div>
+
+                <div class="memory-card" data-cards="card5">
+                    <img class="front-face" src="assets/images/rocket_card.jpg" alt="rocket" />
+
+                </div>
+
+                <div class="memory-card" data-cards="card5">
+                    <img class="front-face" src="assets/images/rocket_card.jpg" alt="rocket" />
+
+                </div>
+
+                <div class="memory-card" data-cards="card6">
+                    <img class="front-face" src="assets/images/starlord_card.jpg" alt="starlord" />
+
+                </div>
+
+                <div class="memory-card" data-cards="card6">
+                    <img class="front-face" src="assets/images/starlord_card.jpg" alt="starlord" />
+
+                </div>
+
+                
+
+                
+
+            </section>
+
+            <div class="row">
+                <div class="col-12 text-center points mt-3">
+                    
+                </div>
+            </div>
+
+            <div id="won" class="text-center">
+                <p>You have matched all the cards! Awesome job!</p>
+                <p>Points: <span id="finalPoints">0</span></p>
+                <button class="btn" id="playAgain">Play Again?</button>
+            </div>
+
+
+
         </section>
-      </section>
     </section>
 
-    
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
-    
-  </body>
+
+  
+</body>
+
 </html>

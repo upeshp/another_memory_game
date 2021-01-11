@@ -22,8 +22,8 @@ let firstCard, secondCard;
 
 /* code for adding sound effects taken from https://www.youtube.com/watch?v=QHBOOouI1tY */
 
-var fxCorrect = new Audio("assets/sounds/my_reflexes.mp3");
-var fxWrong = new Audio("assets/sounds/i_don't_learn.mp3");
+var fxCorrect = new Audio("assets/sounds/nothing_goes_new.mp3");
+var fxWrong = new Audio("assets/sounds/i_don't_learn_new.mp3");
 var fxWon = new Audio("assets/sounds/oh_yeah.mp3");
 
 /* code for adding mute button from https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_av_prop_muted */
@@ -34,22 +34,22 @@ var fxWon = new Audio("assets/sounds/oh_yeah.mp3");
 
 
 
-/* http://jsfiddle.net/K9553/ */
-   function toggleSound(img) {
-   img.src= img.src=="images/volume_up.png" ? "images/no_sound.png" : "images/volume_up.png";
-    fxCorrect.muted = !fxCorrect.muted;
-    fxWrong.muted = !fxWrong.muted;
-    fxWon.muted = !fxWon.muted; 
-}
 
 
-function toggleImage() {
-   var img1 = "images/volume_up.png";
-   var img2 = "images/no_sound.png";
-   
-   var imgElement = document.getElementById('toggleImage');
 
-   imgElement.src = (imgElement.src === img1)? img2 : img1;
+/* http://www.developphp.com/video/JavaScript/Change-CSS-Class-Style-className-Toggle-Tutorial */
+function toggleClass(el){
+	if(el.className == "soundon"){
+        el.className = "soundoff";
+        fxCorrect.muted = true;
+        fxWrong.muted = true;
+        fxWon.muted = true; 
+	} else {
+        el.className = "soundon";
+        fxCorrect.muted = false;
+        fxWrong.muted = false;
+        fxWon.muted = false;
+	}
 }
 
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
@@ -57,7 +57,7 @@ function toggleImage() {
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("HelpBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -108,10 +108,11 @@ function cardsMatch() {
 
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
-      
+ 
+  
   points += 4; /*was4*/
   finalPoint = points;  
-  win += 2;
+  win += 2; /*NEED TO CHANGE IF ADD MORE CARDS */
   finalScore.innerHTML = finalPoint;
   score.innerHTML = points;
 
