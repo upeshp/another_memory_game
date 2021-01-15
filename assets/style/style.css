@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Marvel', sans-serif;
   
 }
 
@@ -96,7 +96,6 @@ body {
 #won {
   visibility: hidden; /*hidden*/
   border-radius: 10px;
-  background: #ffbdf1;
   background-image: linear-gradient(to bottom, #f7dd8b 0%, #f8e9bf 100%);
   margin: auto;
   position: absolute;
@@ -167,6 +166,7 @@ max-width: 100%; /*for img-fluid? */
 /* Modal Content */
 .modal-content {
   background-color: #ffffff;
+  font-size: 20px;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -219,7 +219,7 @@ max-width: 100%; /*for img-fluid? */
   }
 }
 
-/*medium devices*/
+/*MEDIUM DEVICES*/
 
 @media (min-width: 768px) and (max-width: 991px) {
   
@@ -239,7 +239,9 @@ max-width: 100%; /*for img-fluid? */
     top: 40%;
   }
 
- 
+ .modal-content {
+    font-size: 18px; 
+}
 
   .points > p,
   #won > h1,
@@ -266,7 +268,10 @@ max-width: 100%; /*for img-fluid? */
     top: 30%;
   }
 
- 
+ .modal-content {
+    font-size: 16px; 
+}
+
   .points > p,
   #won > h1,
   #won p,
@@ -311,7 +316,10 @@ max-width: 100%; /*for img-fluid? */
     top: 30%;
   }
 
- 
+  .modal-content {
+    font-size: 14px; 
+}
+
 
   .points > p,
   #won > h1,
@@ -359,7 +367,9 @@ max-width: 100%; /*for img-fluid? */
     top: 30%;
   }
 
- 
+.modal-content {
+    font-size: 12px; 
+}
 
   .points > p,
   #won > h1,
