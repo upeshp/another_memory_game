@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COSMOS</title>
+    <title>GUARDIANS PAIRS GAME</title>
 
     <!--GOOGLE FONTS-->
 
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ubuntu:wght@500&display=swap" rel="stylesheet">    
 
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -35,9 +36,11 @@
             <div class="col-4"></div>
 
             <div class="col-4">
-                <header class="text-center">
-                    <img src="assets/images/logo.png" class="img-fluid" alt="GUARDIANS OF THE GALAXY">
-                    <p style="color: aliceblue;">Pairs Game</p>
+                <header class="header">
+                    <a href="gamepage.html">
+                        <img src="assets/images/logo.png" class="img-fluid" alt="GUARDIANS OF THE GALAXY">
+                    </a>
+                    <p>Pairs Game</p>
                 </header>
             </div>
 
@@ -66,8 +69,8 @@
                 <div id="HelpBtn"> </div>
             </div>
 
-            <div class="col-4 text-center">
-                <p style="color: aliceblue;">Points: <span id="point"> 0</span></p>
+            <div class="col-4 points-display">
+                <p>Points : <span id="point"> 0 </span></p>
             </div>
 
             <div class="col-2">
@@ -86,7 +89,7 @@
             <div id="myModal" class="modal">
 
                 <!-- Modal content -->
-                <div class="modal-content">
+                <div class="modal-content text-center">
                     <span class="close">&times;</span>
                     <p>Match the cards, earn 4 points for each correct match, but lose 1 point for a mismatch!</p>
                 </div>
@@ -94,101 +97,81 @@
             </div>
 
 
-    <section class="container mx-auto">
-        <section class="mx-auto">
+    <div class="container fluid">
+        
+        <div class="row no-gutters justify-content-center">
             
+            <div class="col-12">
 
-            
+                <section class="memory-game">
 
-            <section class="memory-game">
+                    <div class="memory-card" data-cards="card1">
+                        <img class="front-face" src="assets/images/drax_card.jpg" alt="drax" />
+                    </div>
 
-                <div class="memory-card" data-cards="card1">
-                    <img class="front-face" src="assets/images/drax_card.jpg" alt="drax" />
+                    <div class="memory-card" data-cards="card1">
+                        <img class="front-face" src="assets/images/drax_card.jpg" alt="drax" />
+                    </div>
 
-                </div>
+                    <div class="memory-card" data-cards="card2">
+                        <img class="front-face" src="assets/images/gamora_card.jpg" alt="gamorra" />
+                    </div>
 
-                <div class="memory-card" data-cards="card1">
-                    <img class="front-face" src="assets/images/drax_card.jpg" alt="drax" />
+                    <div class="memory-card" data-cards="card2">
+                        <img class="front-face" src="assets/images/gamora_card.jpg" alt="gamorra" />
+                    </div>
 
-                </div>
+                    <div class="memory-card" data-cards="card3">
+                        <img class="front-face" src="assets/images/groot_card.jpg" alt="groot" />
+                    </div>
 
-                <div class="memory-card" data-cards="card2">
-                    <img class="front-face" src="assets/images/gamora_card.jpg" alt="gamorra" />
+                    <div class="memory-card" data-cards="card3">
+                        <img class="front-face" src="assets/images/groot_card.jpg" alt="groot" />
+                    </div>
 
-                </div>
+                    <div class="memory-card" data-cards="card4">
+                        <img class="front-face" src="assets/images/nebula_card.jpg" alt="nebula" />
+                    </div>
 
-                <div class="memory-card" data-cards="card2">
-                    <img class="front-face" src="assets/images/gamora_card.jpg" alt="gamorra" />
+                    <div class="memory-card" data-cards="card4">
+                        <img class="front-face" src="assets/images/nebula_card.jpg" alt="nebula" />
+                    </div>
 
-                </div>
+                    <div class="memory-card" data-cards="card5">
+                        <img class="front-face" src="assets/images/rocket_card.jpg" alt="rocket" />
+                    </div>
 
-                <div class="memory-card" data-cards="card3">
-                    <img class="front-face" src="assets/images/groot_card.jpg" alt="groot" />
+                    <div class="memory-card" data-cards="card5">
+                        <img class="front-face" src="assets/images/rocket_card.jpg" alt="rocket" />
+                    </div>
 
-                </div>
+                    <div class="memory-card" data-cards="card6">
+                        <img class="front-face" src="assets/images/starlord_card.jpg" alt="starlord" />
+                    </div>
 
-                <div class="memory-card" data-cards="card3">
-                    <img class="front-face" src="assets/images/groot_card.jpg" alt="groot" />
+                    <div class="memory-card" data-cards="card6">
+                        <img class="front-face" src="assets/images/starlord_card.jpg" alt="starlord" />
+                    </div>
 
-                </div>
+                </section>
 
-                <div class="memory-card" data-cards="card4">
-                    <img class="front-face" src="assets/images/nebula_card.jpg" alt="nebula" />
-
-                </div>
-
-                <div class="memory-card" data-cards="card4">
-                    <img class="front-face" src="assets/images/nebula_card.jpg" alt="nebula" />
-
-                </div>
-
-                <div class="memory-card" data-cards="card5">
-                    <img class="front-face" src="assets/images/rocket_card.jpg" alt="rocket" />
-
-                </div>
-
-                <div class="memory-card" data-cards="card5">
-                    <img class="front-face" src="assets/images/rocket_card.jpg" alt="rocket" />
-
-                </div>
-
-                <div class="memory-card" data-cards="card6">
-                    <img class="front-face" src="assets/images/starlord_card.jpg" alt="starlord" />
-
-                </div>
-
-                <div class="memory-card" data-cards="card6">
-                    <img class="front-face" src="assets/images/starlord_card.jpg" alt="starlord" />
-
-                </div>
-
-                
-
-                
-
-            </section>
-
-            <div class="row">
-                <div class="col-12 text-center points mt-3">
-                    
-                </div>
             </div>
 
             <div id="won" class="text-center">
-                <p>You have matched all the cards! Awesome job!</p>
-                <p>Points: <span id="finalPoints">0</span></p>
+                <p>All pairs are matched! You earned <span id="finalPoints">0</span> points!</p>
                 <button class="btn" id="playAgain">Play Again?</button>
             </div>
 
+        </div>
+
+        <div class="row no-gutters justify-content-center mt-5">
+        </div>
+
+    </div>
 
 
-        </section>
-    </section>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.js"
-        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 
   

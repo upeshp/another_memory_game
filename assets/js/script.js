@@ -1,6 +1,8 @@
 /* code for memory game https://marina-ferreira.github.io/tutorials/js/memory-game/ */
 /* code for additional features like styling, points, modal etc: https://www.youtube.com/watch?v=WXv51-Lk438 */
 
+/* GENERAL */
+
 const cards = document.querySelectorAll(".memory-card");
 const score = document.getElementById("point");
 const finalScore = document.getElementById("finalPoints");
@@ -26,17 +28,6 @@ var fxCorrect = new Audio("assets/sounds/nothing_goes_new.mp3");
 var fxWrong = new Audio("assets/sounds/one_of_my_issues_new.mp3");
 var fxWon = new Audio("assets/sounds/oh_yeah.mp3");
 
-/* code for adding mute button from https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_av_prop_muted */
-/* code for having a single mute/unmute button from https://stackoverflow.com/questions/28998076/one-click-to-mute-another-click-to-unmute?noredirect=1&lq=1 */
-
-
-
-
-
-
-
-
-
 /* http://www.developphp.com/video/JavaScript/Change-CSS-Class-Style-className-Toggle-Tutorial */
 function toggleClass(el){
 	if(el.className == "soundon"){
@@ -51,6 +42,8 @@ function toggleClass(el){
         fxWon.muted = false;
 	}
 }
+
+/* MODAL */
 
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal */
 // Get the modal
@@ -78,6 +71,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+/* GAME */
 
 function flipCard() {
   if (lockBoard) return;
@@ -172,7 +168,3 @@ play.addEventListener("click", playAgain);
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
 
-function shipMove() {
-  ship.classList.add = "animate__slideOutRight";
-}
-button.addEventListener("click", shipMove);

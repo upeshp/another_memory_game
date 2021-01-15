@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Ubuntu', sans-serif;
+  
 }
 
 body {
@@ -11,52 +12,37 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: top; 
-   
-   
+  background-position: top;   
+}
+
+.header {
+    color: #ebe6eb;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;  
+    letter-spacing: 3px;
+}
+
+.points-display {
+    color: #ebe6eb;
+    text-align: center;
+    text-transform: uppercase;  
+    font-weight: lighter;
+    letter-spacing: 1px;
     
-  
 }
 
-.open {
-  width: (100%);
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-}
 
-.mainTag {
-  color: #c5c5c5;
-  font-weight: bolder;
-}
 
-.welcome {
-  color: #ffffff;
-  font-weight: 800;
-  width: 70%;
-  margin: auto;
-  margin-bottom: 20px;
-}
 
-.btn-handle {
-  border: 2px solid #2580b3;
-  color: #fff;
-}
 
-.btn-handle:hover {
-  background: linear-gradient(115.87deg, #14f1d9 0%, #3672f8 100%);
-}
 
-.headTag,
-.points > p {
-  color: #c5c5c5;
-  font-weight: bolder;
-}
 
-#point {
-  font-weight: 1300;
-}
+
+
+
+
+    
 
 .memory-game {
   width: calc(25% - 10px);
@@ -78,6 +64,7 @@ body {
   transition: transform 0.5s;
   border-radius: 5px;
   background-image: linear-gradient(-225deg, #6b0579 0%, #dc7ae9 100%);
+  cursor: pointer;
   
 }
 
@@ -102,7 +89,7 @@ body {
 
 .front-face {
   transform: rotateY(180deg);
-  background-image: linear-gradient(-225deg, #fac310 0%, #f8d49d 100%);
+  background-image: linear-gradient(-225deg, #c7c3b8 0%, #faf9f9 100%);
   
 }
 
@@ -110,26 +97,23 @@ body {
   visibility: hidden; /*hidden*/
   border-radius: 10px;
   background: #ffbdf1;
-  background-image: linear-gradient(to bottom, #e598f8 0%, #db68f8 100%);
+  background-image: linear-gradient(to bottom, #f7dd8b 0%, #f8e9bf 100%);
   margin: auto;
   position: absolute;
-  top: 80%;
+  top: 60%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  border: 5px solid #5e0766
+  
 }
 
-#won > h1,
-#won p {
-  font-weight: bolder;
-}
+
 
 #playAgain {
-  border: 2px solid #5e0766;
+  border: 2px solid #919189;
   border-radius: 5px;
-  background: #b905b0;
+  background: #c4bbc3;
 }
 
 #playAgain:hover {
@@ -138,48 +122,7 @@ body {
 }
 
 
-.sound {
-    background-color: #e91303;
-    
-}
 
-.toggle {
-    background-image: url("../images/vortex.svg");
-}
-
-
-.fa {
-  font-size: 50px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.fa:hover {
-  color: darkblue;
-}
-
-/* https://stackoverflow.com/questions/22918220/how-to-create-a-only-mute-unmute-button-like-youtube-in-html?lq=1 */
-
-input#un-mute {
-    display: none;
-    
-    
-}
-
-.unmute img {
-    display: none;
-    
-}
-
-input#un-mute:checked ~ .unmute img {
-    display: initial;
-    
-}
-
-input#un-mute:checked ~ .mute img {
-    display: none;
-    
-}
 
 #HelpBtn {
 background-image: url("../images/question2.png");     /* https://www.flaticon.com/ */
@@ -223,7 +166,7 @@ max-width: 100%; /*for img-fluid? */
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #ffffff;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -252,20 +195,7 @@ max-width: 100%; /*for img-fluid? */
 
 /*LARGE DEVICES*/
 @media (min-width: 992px) {
-  .mainTag {
-    font-size: 80px;
-    margin-top: 60px;
-  }
-
-  .welcome {
-    font-size: 35px;
-  }
-
-  .btn-handle {
-    font-size: 40px;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
+  
 
   .memory-game {
     width: 640px;
@@ -279,35 +209,20 @@ max-width: 100%; /*for img-fluid? */
     padding: 50px;
   }
 
-  .headTag {
-    font-size: 70px;
-  }
+ 
 
   .points > p,
   #won > h1,
   #won p,
   #playAgain {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 
 /*medium devices*/
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .mainTag {
-    font-size: 75px;
-    margin-top: 60px;
-  }
-
-  .welcome {
-    font-size: 30px;
-  }
-
-  .btn-handle {
-    font-size: 35px;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
+  
 
   .memory-game {
     width: 620px;
@@ -324,37 +239,21 @@ max-width: 100%; /*for img-fluid? */
     top: 40%;
   }
 
-  .headTag {
-    font-size: 70px;
-  }
+ 
 
   .points > p,
   #won > h1,
   #won p,
   #playAgain {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 
 /*SMALL DEVICES*/
 @media (min-width: 576px) and (max-width: 767px) {
-  .mainTag {
-    font-size: 60px;
-    margin-top: 50px;
-  }
-
-  .welcome {
-    font-size: 25px;
-  }
-
-  .btn-handle {
-    font-size: 30px;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
-
+  
   .memory-game {
-    width: 480px;
+    width: 400px; /* was 480px; */
     height: 398px;
   }
   .front-face,
@@ -367,15 +266,12 @@ max-width: 100%; /*for img-fluid? */
     top: 30%;
   }
 
-  .headTag {
-    font-size: 50px;
-  }
-
+ 
   .points > p,
   #won > h1,
   #won p,
   #playAgain {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   #HelpBtn {
@@ -387,27 +283,22 @@ max-width: 100%; /*for img-fluid? */
       background-size: 20px;
   }
 
+  .header {
+    font-size: small;
+}
+
+ .points-display {
+     font-size: small;
+ }
+
 }
 
 /*EXTRA SMALL DEVICES*/
 @media (min-width: 378px) and (max-width: 575px) {
-  .mainTag {
-    font-size: 45px;
-    margin-top: 45px;
-  }
-
-  .welcome {
-    font-size: 25px;
-  }
-
-  .btn-handle {
-    font-size: 30px;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
+  
 
   .memory-game {
-    width: 380px;
+    width: 300px; /* was 380px; */
     height: 315px;
   }
   .front-face,
@@ -420,15 +311,13 @@ max-width: 100%; /*for img-fluid? */
     top: 30%;
   }
 
-  .headTag {
-    font-size: 45px;
-  }
+ 
 
   .points > p,
   #won > h1,
   #won p,
   #playAgain {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   #HelpBtn {
@@ -440,27 +329,23 @@ max-width: 100%; /*for img-fluid? */
       background-size: 20px;
   }
 
+  .header {
+    font-size: x-small;
+}
+
+    .points-display {
+        font-size: x-small;
+    }
+
+
 }
 
 /*X-EXTRA SMALL DEVICES*/
 @media (max-width: 377px) {
-  .mainTag {
-    font-size: 45px;
-    margin-top: 40px;
-  }
-
-  .welcome {
-    font-size: 20px;
-  }
-
-  .btn-handle {
-    font-size: 30px;
-    padding: 10px 20px;
-    border-radius: 10px;
-  }
+  
 
   .memory-game {
-    width: 340px;
+    width: 250px; /* was 340px; */
     height: 282px;
   }
 
@@ -474,18 +359,16 @@ max-width: 100%; /*for img-fluid? */
     top: 30%;
   }
 
-  .headTag {
-    font-size: 40px;
-  }
+ 
 
   .points > p,
   #won > h1,
   #won p,
   #playAgain {
-    font-size: 25px;
+    font-size: 20px;
   }
 
-  #myBtn {
+ #HelpBtn {
       background-size: 20px;
   }
 
@@ -493,5 +376,14 @@ max-width: 100%; /*for img-fluid? */
   .soundoff {
       background-size: 20px;
   }
+
+  .header {
+    font-size: x-small;
+}
+
+  .points-display {
+        font-size: x-small;
+    }
+
 
 }
