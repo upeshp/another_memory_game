@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
   padding: 0;
   margin: 0;
@@ -8,12 +10,14 @@
 
 body {
   height: 100vh;
-  background-image: url("../images/guardians_shadow_mercury.jpg") ; /* Photo by Alexander Andrews on Unsplash */
+  background-image: url("../images/guardians_shadow_mercury.jpg") ; 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;   
 }
+
+/* HEADER */
 
 .header {
     color: #ebe6eb;
@@ -22,6 +26,8 @@ body {
     font-weight: bold;  
     letter-spacing: 3px;
 }
+
+/* POINTS */
 
 .points-display {
     color: #ebe6eb;
@@ -33,16 +39,7 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-    
+/* MEMORY GAME */
 
 .memory-game {
   width: calc(25% - 10px);
@@ -93,6 +90,9 @@ body {
   
 }
 
+
+/* WIN MODAL */
+
 #won {
   visibility: hidden; /*hidden*/
   border-radius: 10px;
@@ -106,8 +106,6 @@ body {
   z-index: 1;
   
 }
-
-
 
 #playAgain {
   border: 2px solid #919189;
@@ -123,6 +121,13 @@ body {
 
 
 
+/* SOUND MUTE BUTTON */
+
+.soundon{ background-image: url("../images/volume_up.png"); /* https://www.flaticon.com/ */  max-width: 100%; margin-left: auto; margin-right: auto; background-position: 50% 50%; background-size: 30px; background-repeat: no-repeat; background-position: center;  width:100px; height:100px; cursor:pointer; }
+.soundoff{ background-image: url("../images/no_sound.png"); /* https://www.flaticon.com/ */ max-width: 100%; margin-left: auto; margin-right: auto; background-position: 50% 50%; background-size: 30px; background-repeat: no-repeat; background-position: center;  width:100px; height:100px; cursor:pointer; }
+
+/* HELP MODAL */
+
 #HelpBtn {
 background-image: url("../images/question2.png");     /* https://www.flaticon.com/ */
 cursor:pointer;
@@ -135,15 +140,7 @@ margin-left: auto;
 margin-right: auto;
 display: flex;
 max-width: 100%; /*for img-fluid? */
-
-
 }
-
-.soundon{ background-image: url("../images/volume_up.png"); /* https://www.flaticon.com/ */  max-width: 100%; margin-left: auto; margin-right: auto; background-position: 50% 50%; background-size: 30px; background-repeat: no-repeat; background-position: center;  width:100px; height:100px; cursor:pointer; }
-.soundoff{ background-image: url("../images/no_sound.png"); /* https://www.flaticon.com/ */ max-width: 100%; margin-left: auto; margin-right: auto; background-position: 50% 50%; background-size: 30px; background-repeat: no-repeat; background-position: center;  width:100px; height:100px; cursor:pointer; }
-
-
-
 
 /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal*/
 
@@ -193,7 +190,9 @@ max-width: 100%; /*for img-fluid? */
 }
 
 
-/*LARGE DEVICES*/
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Large Devices */
 @media (min-width: 992px) {
   
 
@@ -219,7 +218,7 @@ max-width: 100%; /*for img-fluid? */
   }
 }
 
-/*MEDIUM DEVICES*/
+/* Medium Devices */
 
 @media (min-width: 768px) and (max-width: 991px) {
   
@@ -251,7 +250,7 @@ max-width: 100%; /*for img-fluid? */
   }
 }
 
-/*SMALL DEVICES*/
+/* Small Devices */
 @media (min-width: 576px) and (max-width: 767px) {
   
   .memory-game {
@@ -298,7 +297,7 @@ max-width: 100%; /*for img-fluid? */
 
 }
 
-/*EXTRA SMALL DEVICES*/
+/* Extra Small Devices */
 @media (min-width: 378px) and (max-width: 575px) {
   
 
@@ -348,7 +347,7 @@ max-width: 100%; /*for img-fluid? */
 
 }
 
-/*X-EXTRA SMALL DEVICES*/
+/* Extra Extra Small Devices */
 @media (max-width: 377px) {
   
 
